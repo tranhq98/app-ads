@@ -48,10 +48,33 @@ body, html {
 
 /* Đảm bảo rằng văn bản "Văn bản mẫu ở trên" căn giữa */
 .text-center {
-    margin-bottom: 20px;
+    margin-bottom: 60px;
 }
 .item {
     border: 2px solid blue;  /* Đường viền màu xanh, độ dày 2px */
     padding: 10px;  /* Thêm khoảng cách bên trong div */
     border-radius: 8px;  /* Tạo góc bo tròn cho đường viền (tùy chọn) */
+}
+
+/* Điều chỉnh cho các màn hình nhỏ hơn */
+@media (max-width: 768px) {
+    .box {
+        flex-direction: column;  /* Đặt các item theo cột cho màn hình nhỏ */
+        align-items: center;
+    }
+
+    .item {
+        width: 80%; /* Điều chỉnh lại chiều rộng của các item trên màn hình nhỏ */
+        margin-bottom: 20px; /* Khoảng cách giữa các item */
+    }
+}
+
+@media (max-width: 480px) {
+    .text-center {
+        font-size: 20px; /* Giảm kích thước font cho điện thoại */
+    }
+
+    .item p {
+        font-size: 14px; /* Giảm kích thước font cho text */
+    }
 }
