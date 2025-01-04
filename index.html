@@ -3,16 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hai ô vuông</title>
+    <title>TranHQ Gaming</title>
     <style>
         body {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
+        }
+
+        .search-box {
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .container {
@@ -37,9 +53,29 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="box">Dòng chữ mẫu 1</div>
-        <div class="box">Dòng chữ mẫu 2</div>
+    <div class="search-box">
+        <form id="urlForm">
+            <input type="text" id="urlInput" placeholder="Nhập URL và nhấn Enter">
+        </form>
     </div>
+    <div class="container">
+        <div class="box">Double</div>
+        <div class="box">Tiger Gaming</div>
+    </div>
+
+    <script>
+        document.getElementById('urlForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const url = document.getElementById('urlInput').value.trim();
+
+            // Kiểm tra nếu URL có http/https, nếu không thì thêm http://
+            if (url) {
+                const fullUrl = url.startsWith('http://') || url.startsWith('https://') ? url : 'http://' + url;
+                window.location.href = fullUrl;
+            } else {
+                alert('Vui lòng nhập URL hợp lệ!');
+            }
+        });
+    </script>
 </body>
 </html>
