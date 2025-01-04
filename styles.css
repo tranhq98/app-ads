@@ -1,0 +1,52 @@
+/* Căn giữa toàn bộ nội dung */
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Container chứa tất cả phần tử */
+.container {
+    text-align: center;
+}
+
+/* Ô vuông chứa 2 phần tử */
+.box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Mỗi phần tử trong ô vuông */
+.item {
+    cursor: pointer;
+    text-align: center;
+    width: 200px;
+}
+
+/* Style ảnh */
+.item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Style văn bản bên dưới ảnh */
+.item p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.item:hover {
+    opacity: 0.8; /* Thêm hiệu ứng hover */
+}
+
+/* Đảm bảo rằng văn bản "Văn bản mẫu ở trên" căn giữa */
+.text-center {
+    margin-bottom: 20px;
+}
