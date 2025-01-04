@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,6 @@
     <style>
         body {
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
@@ -16,14 +16,22 @@
             background-color: #f0f0f0;
         }
 
+        .container {
+            display: flex;
+            flex-direction: column;
+            /* Sắp xếp theo chiều dọc */
+            align-items: center;
+            gap: 20px;
+            /* Khoảng cách giữa các phần tử */
+        }
+
         .search-box {
-            margin-bottom: 20px;
             width: 100%;
             max-width: 300px;
+            /* Giới hạn chiều rộng */
         }
 
         .search-box input {
-            width: 100%;
             padding: 10px;
             font-size: 16px;
             border: 1px solid #ccc;
@@ -31,14 +39,16 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        .container {
+        .boxs {
             display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
             gap: 20px;
         }
-
         .box {
             width: 150px;
-            height: 150px;
+            height: 50px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -49,22 +59,30 @@
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             border-radius: 10px;
+            cursor: pointer;
         }
+        #adsDiv {
+            background-color: #b38522;
+        }
+        
     </style>
 </head>
+
 <body>
-    <div class="search-box">
-        <form id="urlForm">
-            <input type="text" id="urlInput" placeholder="Nhập URL và nhấn Enter">
-        </form>
-    </div>
     <div class="container">
-        <div class="box">Double</div>
-        <div class="box">Tiger Gaming</div>
+        <div class="search-box">
+            <form id="urlForm">
+                <input type="text" id="urlInput" placeholder="Nhập URL và nhấn Enter">
+            </form>
+        </div>
+        <div class="boxs">
+            <div class="box">Home</div>
+            <div class="box app-ads" id="adsDiv">app-ads.txt</div>
+        </div>
     </div>
 
     <script>
-        document.getElementById('urlForm').addEventListener('submit', function(event) {
+        document.getElementById('urlForm').addEventListener('submit', function (event) {
             event.preventDefault();
             const url = document.getElementById('urlInput').value.trim();
 
@@ -76,6 +94,10 @@
                 alert('Vui lòng nhập URL hợp lệ!');
             }
         });
+        document.getElementById('adsDiv').addEventListener('click', function () {
+            window.location.href = 'https://tranhq98.github.io/app-ads/app-ads.txt';
+        });
     </script>
 </body>
+
 </html>
