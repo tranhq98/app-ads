@@ -77,7 +77,7 @@
             </form>
         </div>
         <div class="boxs">
-            <div class="box double-gaming">Double Tiger Gaming</div>
+            <div class="box double-gaming" id="gameDiv">Double Tiger Gaming</div>
             <div class="box app-ads" id="adsDiv">app-ads.txt</div>
         </div>
     </div>
@@ -95,6 +95,10 @@
                 alert('Vui lòng nhập URL hợp lệ!');
             }
         });
+        document.getElementById('gameDiv').addEventListener('click', function () {
+            window.location.href = 'https://tranhq98.github.io/app-ads/double-tiger-gaming.html';
+        });
+        
         document.getElementById('adsDiv').addEventListener('click', function () {
             window.location.href = 'https://tranhq98.github.io/app-ads/app-ads.txt';
         });
