@@ -50,3 +50,8 @@ body, html {
 .text-center {
     margin-bottom: 20px;
 }
+.item {
+    border: 2px solid blue;  /* Đường viền màu xanh, độ dày 2px */
+    padding: 10px;  /* Thêm khoảng cách bên trong div */
+    border-radius: 8px;  /* Tạo góc bo tròn cho đường viền (tùy chọn) */
+}
