@@ -5,32 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TranHQ Gaming</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-        }
-
-        .container {
-            display: flex;
-            flex-direction: column;
-            /* Sắp xếp theo chiều dọc */
-            align-items: center;
-            gap: 20px;
-            /* Khoảng cách giữa các phần tử */
-        }
-
         .search-box {
             width: 100%;
             max-width: 300px;
             /* Giới hạn chiều rộng */
         }
-
         .search-box input {
             width: 240px;
             padding: 10px;
@@ -39,7 +20,6 @@
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-
         .boxs {
             display: flex;
             justify-content: center;
@@ -73,15 +53,17 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="search-box">
-            <form id="urlForm">
-                <input type="text" id="urlInput" placeholder="Nhập URL và nhấn Enter">
-            </form>
-        </div>
-        <div class="boxs">
-            <div class="box double-gaming" id="gameDiv">Double Tiger Gaming</div>
-            <div class="box app-ads" id="adsDiv">app-ads.txt</div>
+    <div class="home-page">
+        <div class="container">
+            <div class="search-box">
+                <form id="urlForm">
+                    <input type="text" id="urlInput" placeholder="Nhập URL và nhấn Enter">
+                </form>
+            </div>
+            <div class="boxs">
+                <div class="box double-gaming" id="gameDiv">Double Tiger Gaming</div>
+                <div class="box app-ads" id="adsDiv">app-ads.txt</div>
+            </div>
         </div>
     </div>
 
